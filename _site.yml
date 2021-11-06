@@ -5,6 +5,8 @@ navbar:
   left:
     - text: "About"
       href: about.html
+    - text: "Plotly"
+      href: plotly.html
   right:
     - icon: far fa-envelope
       href: mailto:<zv2138@cumc.columbia.com>
