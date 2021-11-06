@@ -1,0 +1,16 @@
+---
+title: "plotly"
+output: html_document
+---
+
+```{r setup}
+library(tidyverse)
+library(p8105.datasets)
+
+library(plotly)
+```
+
+```{r}
+data(nyc_inspections)
+```
+
