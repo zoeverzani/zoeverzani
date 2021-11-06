@@ -11,6 +11,26 @@ library(plotly)
 ```
 
 ```{r}
+data("instacart") 
 
+instacart = instacart %>% 
+  janitor::clean_names()
+```
+
+```{r}
+instacart %>% 
+  filter(department == "snacks") %>% 
+  plot_ly(
+    y = ~order_hour_of_day, color = ~aisle, type = "box", colors = "viridis")
+```
+
+```{r}
+instacart %>% 
+  count(department) %>% 
+  mutate(department = fct_reorder(department, n)) %>% 
+  plot_ly(x = ~department, y = ~n, color = ~department, type = "bar", colors = "viridis") %>% 
+  layout( title = "Number of Orders Placed by Department",
+          xaxis = list(title = 'Department'), 
+          yaxis = list(title = 'Count'))
 ```
 
