@@ -1,0 +1,17 @@
+name: "Zoe Verzani"
+output_dir: "."
+navbar:
+  title: "Home"
+  left:
+    - text: "About"
+      href: about.html
+  right:
+    - icon: far fa-envelope
+      href: mailto:<zv2138@cumc.columbia.com>
+    - icon: fa-github fa-lg
+      href: http://github.com/zoeverzani
+    - icon: fab fa-linkedin
+      href: https://www.linkedin.com/in/zoe-verzani/ 
+output:
+  html_document:
+    theme: lumen

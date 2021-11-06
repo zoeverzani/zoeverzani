@@ -1,0 +1,52 @@
+---
+title: "About"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+## Research Experience 
+
+### Columbia University Mailman School of Public Health, New York, NY 
+#### Undergraduate Research Assistant for Dr. Seth Prins
+##### June 2021 – Present
+* Analyze epidemiological and police surveillance data in R to investigate adolescent substance use as determinant and consequence of the school‐to‐prison pipeline: disentangling individual risk, social determinants, and group disparities
+* Create report summaries for publication and presentation to professional organizations and the general public
+
+### Turn 2 Us (T2U) – New York Presbyterian, New York, NY 
+#### FORWARD Community Practicum Fellow
+##### June 2021 – September 2021
+* Facilitate and organize 10 parent/caregiver workshops on improving Mental Health Literacy (MHL)
+* Create parent/caregiver MHL surveys and analyze survey data to evaluate the effectiveness of T2U as a mental health promotion and prevention program
+* Revise research paper for publication through literature review and analysis of survey data on the effectiveness of the T2U MHL intervention in increasing MHL of school personal
+* Manuscript submitted for publication: Montañez, E., Berger-Jenkins, E., Finkel, M., Verzani, Z. (2021). Supporting mental health literacy in school personnel
+
+### McGill University, Montreal Quebec, Canada 
+#### Undergraduate Research Assistant for Dr. Sam Daniel
+##### January 2019 – August 2019
+* Conducted investigational research to determine how patient specific factors change bone biology to impede Bone Anchored Hearing Implant (BAHI) stability and prevent osseointegration
+* Published research paper: Bezdjian, A., Verzani, Z., Thomeer, H., Willie, B., Daniel, S (2019). Smoking as a risk factor for spontaneous bone anchored hearing implant extrusion
+* Presented poster presentation at 2019 RI-MUHC Summer Student Research Day
+
+## Work Experience 
+### Community Service Society of New York (CSSNY), New York, NY 
+#### Graduate Intern at Community Health Advocates (CHA)
+##### January 2021 – June 2021
+* Co-developed a health equity toolkit utilized by all CSSNY programs and services to analyze client demographic data and set program specific health equity goals
+* Analyzed and interpret data using Excel from over 60,000 cases to guide CSSNY’s advocacy work and identify critical outreach stakeholders and communication channels
+* Designed consumer facing resources to assist clients in filing complaints against providers who engage in professional misconduct
+* Provided advocacy and representation services to New York health insurance consumers to protect their legal rights
+
+### School of the Future, New York, NY 
+#### Neuroscience Teacher
+##### September 2019 – June 2020
+* Taught and assessed 2 neuroscience classrooms of 25 students each; compromised of 11th and 12th graders
+* Developed lesson plans, graded projects and tests, collaborated with school administration, and mentored students on individual STEM thesis papers required for graduation
+* Coordinated with paraprofessionals and parents to develop a supportive learning environment for the 15 students under my supervision with various special needs and disabilities such as OCD, Autism, and Generalized Anxiety Disorder
+
+## Leadership Experience 
+* Mental Health and Well-Being Student Lead - COVID-19 Student Service Corps, Columbia University September 2020 – Present
+* Lead Teaching Assistant, Quantitative Research Methods and Applications Course – Columbia University Fall 2021
+* Physiology Student Government: President, VP Finance, First Year Representative, McGill University September 2016 – May 2019
+
