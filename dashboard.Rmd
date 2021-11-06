@@ -1,0 +1,51 @@
+---
+title: "Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+
+library(tidyverse)
+library(p8105.datasets)
+
+library(plotly)
+data("instacart") 
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+instacart %>% 
+  count(department) %>% 
+  mutate(department = fct_reorder(department, n)) %>% 
+  plot_ly(x = ~department, y = ~n, color = ~department, type = "bar", colors = "viridis") %>% 
+  layout( title = "Number of Orders Placed by Department",
+          xaxis = list(title = 'Department'), 
+          yaxis = list(title = 'Count'))
+```
+
+### Chart C
+
+```{r}
+instacart %>% 
+  filter(department == "snacks") %>% 
+  plot_ly(
+    y = ~order_hour_of_day, color = ~aisle, type = "box", colors = "viridis")
+```
+
