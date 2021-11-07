@@ -5,23 +5,46 @@ output: html_document
 
 ```{r setup}
 library(tidyverse)
+library(lubridate)
 library(p8105.datasets)
 
 library(plotly)
 ```
 
 ```{r}
-data("instacart") 
-
+data("instacart")
 instacart = instacart %>% 
   janitor::clean_names()
 ```
 
 ```{r}
+plot_3 = instacart %>% 
+  mutate(
+    order_dow = order_dow + 1,
+    order_dow = wday(order_dow, label = T)
+   ) %>% 
+  filter(department == "beverages") %>% 
+  group_by(order_dow) %>% 
+  count(aisle)
+
+
+plot_3 %>% 
+  ungroup() %>% 
+  plot_ly(type = 'scatter', mode = 'lines+markers') %>% 
+  add_trace(x = ~order_dow, y = ~n, color = ~aisle) %>% 
+  layout(
+          yaxis = list(title = 'Quantity of Products Ordered'),
+          xaxis = list(title = "Day of the Week"))
+```
+
+
+```{r}
 instacart %>% 
   filter(department == "snacks") %>% 
   plot_ly(
-    y = ~order_hour_of_day, color = ~aisle, type = "box", colors = "viridis")
+    y = ~order_hour_of_day, color = ~aisle, type = "box", colors = "viridis") %>% 
+  layout( title = "Hour of the Day Orders are Place for the Snack Aisles",
+          yaxis = list(title = 'Hour of the Day'))
 ```
 
 ```{r}
