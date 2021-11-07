@@ -1,7 +1,7 @@
 ---
 title: "Dashboard"
 output: 
-  flexdashboard::flex_dashboard:
+  flexdashboard::dashboard:
     orientation: columns
     vertical_layout: fill
     source_code: embed
