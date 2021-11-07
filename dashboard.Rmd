@@ -1,0 +1,71 @@
+---
+title: "Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    source_code: embed
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+
+library(lubridate)
+library(tidyverse)
+library(p8105.datasets)
+
+library(plotly)
+data("instacart") 
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+plot_3 = instacart %>% 
+  mutate(
+    order_dow = order_dow + 1,
+    order_dow = wday(order_dow, label = T)
+   ) %>% 
+  filter(department == "beverages") %>% 
+  group_by(order_dow) %>% 
+  count(aisle)
+
+
+plot_3 %>% 
+  ungroup() %>% 
+  plot_ly(type = 'scatter', mode = 'lines+markers') %>% 
+  add_trace(x = ~order_dow, y = ~n, color = ~aisle) %>% 
+  layout(
+          yaxis = list(title = 'Quantity of Products Ordered'),
+          xaxis = list(title = "Day of the Week"))
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+instacart %>% 
+  count(department) %>% 
+  mutate(department = fct_reorder(department, n)) %>% 
+  plot_ly(x = ~department, y = ~n, color = ~department, type = "bar", colors = "viridis") %>% 
+  layout( title = "Number of Orders Placed by Department",
+          xaxis = list(title = 'Department'), 
+          yaxis = list(title = 'Count'))
+```
+
+### Chart C
+
+```{r}
+instacart %>% 
+  filter(department == "snacks") %>% 
+  plot_ly(
+    y = ~order_hour_of_day, color = ~aisle, type = "box", colors = "viridis") %>% 
+  layout( title = "Hour of the Day Orders are Place for the Snack Aisles",
+          yaxis = list(title = 'Hour of the Day'))
+```
+
